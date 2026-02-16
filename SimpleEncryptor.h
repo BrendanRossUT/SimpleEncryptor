@@ -1,6 +1,8 @@
 #ifndef SIMPLEENCRYPTOR_H
 #define SIMPLEENCRYPTOR_H
 
+#include <string>
+
 /*
 * A simple encryption program that uses a custom pseudorandom number generator to encrypt and decrypt messages.
 *
