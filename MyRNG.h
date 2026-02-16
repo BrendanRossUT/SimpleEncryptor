@@ -13,9 +13,9 @@ class MyRNG
 public:
 
     /**
-     * Generates a random decimal number between 0 and 1 (inclusive)
+     * Generates a pseudorandom number.
      */
-    double myRandom();
+    int myRandom();
 };
 
 #endif

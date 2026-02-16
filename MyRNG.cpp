@@ -3,6 +3,7 @@
 #include <chrono>
 #include <cmath>
 #include <vector>
+#include <algorithm>
 
 /*
  * This class acts as a pseudorandom number generator, made by me :)
@@ -11,17 +12,16 @@
  * 2026-2-16
  */
 
-double MyRNG::myRandom() {
+int MyRNG::myRandom() {
     clock_t start = clock();
     time_t currentTime = time(nullptr);
     tm*  currentLocalTime = localtime(&currentTime);
         for(int i = 0; i < currentLocalTime->tm_sec; i++) {
             std::vector<int> list;
-            for(int j = 0; j < 100; j++) {
+            for(int j = 10000; j > 0; j--) {
                 list.push_back(j);
             }
-            list.shuffle(list.begin(), list.end());
-            sort(list.begin(), list.end());
+            std::sort(list.begin(), list.end());
         }
         
     std::chrono::time_point<std::chrono::system_clock> now = std::chrono::system_clock::now();
@@ -35,5 +35,5 @@ double MyRNG::myRandom() {
     }
 
     double randomNumber = M_PI * milliseconds / runningTime;
-    return floor(randomNumber);
+    return static_cast<int>(randomNumber);
 }
