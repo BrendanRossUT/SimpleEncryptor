@@ -4,8 +4,16 @@ A simple encryption software written in C++. Made for practice with licensing.
 This software utilizes a custom made RNG to encrypt simple string messages. The RNG generates numbers by using a combination of the user's system time and the running time of repeatedy sorting a reverse-sorted array.
 
 # How To Run
-FOR VSCODE
+To install this project, download the 5 files:
+- MyRNG.h
+- MyRNG.cpp
+- SimpleEncryptor.h
+- SimpleEncryptor.cpp
+- main.cpp
+
+Instructions for VSCode
 - Users can compile the project by running "g++ MyRNG.cpp SimpleEncryptor.cpp main.cpp -o encryptor" in the VSCode terminal.
+- Users can then run the .exe file by running "./encryptor" in the VSCode terminal.
 A main.cpp framework file is included for basic testing. Users can change the input string within this file.
 
 # Warnings and Limitations
