@@ -6,7 +6,6 @@ This software utilizes a custom made RNG to encrypt simple string messages. The 
 # How To Run
 FOR VSCODE
 - Users can compile the project by running "g++ MyRNG.cpp SimpleEncryptor.cpp main.cpp -o encryptor" in the VSCode terminal.
-
 A main.cpp framework file is included for basic testing. Users can change the input string within this file.
 
 # Warnings and Limitations
